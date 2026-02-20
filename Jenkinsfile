@@ -1,1 +1,11 @@
-sh './deploy.sh'
+pipeline {
+    agent any
+
+    stages {
+        stage('Deploy') {
+            steps {
+                sh './deploy.sh'
+            }
+        }
+    }
+}
